@@ -4,7 +4,11 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { startTransition } from "react";
 
-export default function Error({ error, reset }) {
+interface ErrorType {
+  error: string;
+  reset: () => void;
+}
+export default function Error({ error, reset }: ErrorType) {
   useEffect(() => {
     // Log the error to an error reporting service
     console.error(error);
