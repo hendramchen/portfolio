@@ -1,6 +1,7 @@
 import Image from "next/image";
 import profile from "../../public/images/profile-picture.png";
 import Card from "@/components/card";
+import H1 from "@/components/h1";
 
 export const metadata = {
   title: "About",
@@ -68,7 +69,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-8">
-        <h2>Work Experience</h2>
+        <H1>Work Experience</H1>
         {workExperiences.map((work, index) => (
           <WorkCard
             key={index}
@@ -86,11 +87,11 @@ export default function AboutPage() {
 function WorkCard({ company, position, years, descriptions }: WorkExperience) {
   return (
     <Card className="h-full mb-5">
-      <h3>
-        <span>{position}</span> ~ {company}
-      </h3>
+      <H1>
+        {position} ~ {company}
+      </H1>
       <p>{years}</p>
-      <ul>
+      <ul className="list-disc ml-4">
         {descriptions.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
