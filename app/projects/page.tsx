@@ -11,7 +11,7 @@ export const metadata = {
 export default async function ProjectsPage() {
   return (
     <div>
-      <H1>Projects</H1>
+      <H1>Repositories</H1>
 
       <div className="mb-8">Hello, this is the list of my repos!</div>
       <ErrorBoundary fallback={<div>Cannnot fetch projects currently</div>}>

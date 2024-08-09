@@ -1,5 +1,3 @@
-import Image from "next/image";
-import profile from "../../public/images/profile-picture.png";
 import Card from "@/components/card";
 import H1 from "@/components/h1";
 
@@ -44,28 +42,37 @@ const workExperiences: WorkExperience[] = [
       "Performed maintenance and debugging for several high-traffic web applications.",
     ],
   },
+  {
+    company: "Freelance",
+    position: "Web Developer",
+    years: "Oct 2017 - Apr 2018",
+    descriptions: [
+      "Collaborated with the client's accounting staff to build an Accounting System from scratch.",
+      "Web application was able to handle 4 branches of the restaurant.",
+      "Trained the staff about how to use the web application.",
+    ],
+  },
+  {
+    company: "Dimata IT Solutions",
+    position: "Java Developer",
+    years: "Oct 2014 - Jan 2017",
+    descriptions: [
+      "Developed and maintained HR system for Hotel and Bank.",
+      "Worked with Java Enterprise Edition and Company’s framework.",
+      "Worked closely with the client (Bali and Jakarta) for maintenance.",
+    ],
+  },
 ];
 
 export default function AboutPage() {
   return (
     <div>
-      <div className="flex">
-        <Image
-          src={profile}
-          alt="Hendra"
-          className="w-24 h-24 rounded-full"
-          sizes="(max-width: 768px) 100vw, 50vw"
-          priority={true}
-          quality={50}
-          placeholder="blur"
-        />
-        <div className="ml-5">
-          <h1 className="text-3xl">Putu Hendra Eka Parman</h1>
-          <h3 className="text-base">
-            Proficient in full-stack development and well-versed in a variety of
-            programming languages, frameworks, and technologies.
-          </h3>
-        </div>
+      <div className="flex flex-col">
+        <h1 className="text-3xl">Putu Hendra Eka Parman</h1>
+        <h3 className="text-base">
+          Proficient in full-stack development and well-versed in a variety of
+          programming languages, frameworks, and technologies.
+        </h3>
       </div>
 
       <div className="mt-8">
@@ -90,7 +97,7 @@ function WorkCard({ company, position, years, descriptions }: WorkExperience) {
       <H1>
         {position} ~ {company}
       </H1>
-      <p>{years}</p>
+      <p className="mb-2 italic">{years}</p>
       <ul className="list-disc ml-4">
         {descriptions.map((item, index) => (
           <li key={index}>{item}</li>

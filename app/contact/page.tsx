@@ -1,3 +1,5 @@
+import H1 from "@/components/h1";
+
 export const metadata = {
   title: "Contact",
 };
@@ -33,6 +35,8 @@ const contacts: ContactInfo[] = [
 export default function ContactPage() {
   return (
     <div>
+      <H1>Contact</H1>
+
       {contacts.map((contact, index) => (
         <ContactInfo
           key={index}
