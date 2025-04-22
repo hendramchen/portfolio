@@ -25,6 +25,16 @@ export default function Navigation() {
             Contact
           </Link>
         </li>
+        <li>
+          <Link href="/grid" className={styles.link}>
+            Grid
+          </Link>
+        </li>
+        <li>
+          <Link href="/csvpreview" className={styles.link}>
+            CSV Preview
+          </Link>
+        </li>
       </ul>
     </nav>
   );

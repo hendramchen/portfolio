@@ -1,6 +1,6 @@
 // import { cookies } from 'next/headers'
 
-const useServerDarkMode = (defaultTheme = "dark") => {
+const useServerDarkMode = (defaultTheme = "light") => {
   return defaultTheme;
 };
 
